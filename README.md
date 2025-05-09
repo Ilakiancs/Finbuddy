@@ -77,6 +77,7 @@ Review the architecture documentation in the `docs/architecture` directory:
 - Enhanced privacy features with differential privacy
 - Financial document OCR processing
 - Multi-account aggregation
+i
 
 ## 💼 License
 
