@@ -1,84 +1,79 @@
-# FinBuddy - Privacy-First AI Financial Assistant
+# FinBuddy – Privacy-first AI financial assistant
 
-FinBuddy is a privacy-first AI-powered personal finance assistant built on a modern Stealth-Blade microservices architecture.
+FinBuddy is a privacy-first, AI-powered personal finance assistant built on a modern microservices architecture designed for security and reliability.
 
-## 🛡️ Core Principles
+## Core principles
 
-- **Privacy First**: Your financial data never leaves your control
-- **Zero Trust**: Every component assumes the network is hostile
-- **Offline First**: Works with or without internet connectivity
-- **AI-Powered**: Smart financial insights without privacy compromises
+- **Privacy first**: your financial data stays under your control  
+- **Zero trust**: every service assumes the network is untrusted  
+- **Offline first**: works with or without internet access  
+- **AI insights**: financial guidance without compromising privacy  
 
-## 🏗️ Architecture
+## Architecture
 
-FinBuddy is built on a Stealth-Blade architecture, where each capability is isolated in its own secure "blade" microservice:
+FinBuddy uses a modular "blade" architecture, where each capability is isolated in its own secure microservice.
 
 ### Frontend
-- **SvelteKit SPA**: Progressive Web App with offline capabilities
-- **End-to-end Encryption**: Client-side encryption for sensitive data
+- SvelteKit progressive web app with offline support  
+- End-to-end encryption for sensitive data  
 
-### API Layer
-- **Stealth Proxy Gateway**: NestJS/Fastify with TLS termination
-- **Service Mesh**: Istio for mTLS and zero-trust enforcement
+### API layer
+- Proxy gateway (NestJS/Fastify) with TLS termination  
+- Service mesh (Istio) for mutual TLS and policy enforcement  
 
-### Core Blades
-- **Auth Blade**: User authentication and authorization
-- **Expense Blade**: Track expenses, categories, import/export
-- **Budget Blade**: Budget rules engine and alerts
-- **Insights Blade**: AI-powered spending analysis and predictions
-- **Goal Blade**: Financial goal setting and tracking
-- **Chat Blade**: Natural language interface to your finances
-- **AI Inference Blade**: LLM inference with privacy protection
-- **Sync Blade**: Secure cloud synchronization
-- **Notification Blade**: Alerts and notifications
-- **Data Blade**: Encrypted data access layer
+### Core blades
+- **Auth**: user authentication and authorization  
+- **Expenses**: track spending, categories, import/export  
+- **Budget**: rules engine and alerts  
+- **Insights**: AI-powered spending analysis and predictions  
+- **Goals**: financial goal setting and tracking  
+- **Chat**: natural language interface  
+- **AI inference**: private LLM processing  
+- **Sync**: secure data synchronization  
+- **Notifications**: alerts and reminders  
+- **Data**: encrypted data access layer  
 
-### Data Storage
-- **PostgreSQL**: Encrypted financial data storage
-- **MinIO**: Object storage for embeddings and backups
+### Data storage
+- PostgreSQL for encrypted structured data  
+- MinIO for object storage (embeddings, backups)  
 
-## 🚀 Getting Started
+## Security features
 
-*Coming soon...*
+- Mutual TLS between all services  
+- Data encrypted at rest and in transit  
+- Minimal public attack surface  
+- Service-to-service authentication  
+- Field-level encryption for sensitive data  
+- Network isolation policies  
 
-## 🔐 Security Features
+## Documentation
 
-- mTLS between all services
-- Data encrypted at rest and in transit
-- Minimal public attack surface
-- Service-to-service authentication
-- Field-level encryption for sensitive data
-- Strict network isolation policies
+Architecture details can be found in the `docs/architecture` directory:
 
-## 📊 Architecture Diagrams
+- [C4 container diagram](docs/architecture/c4_container_diagram.md)  
+- [Chat sequence diagram](docs/architecture/chat_sequence_diagram.md)  
+- [Zero-trust implementation](docs/architecture/stealth_zero_trust.md)  
 
-Review the architecture documentation in the `docs/architecture` directory:
+## Tech stack
 
-- [C4 Container Diagram](docs/architecture/c4_container_diagram.md)
-- [Chat Sequence Diagram](docs/architecture/chat_sequence_diagram.md)
-- [Zero-Trust Implementation](docs/architecture/stealth_zero_trust.md)
+- Frontend: SvelteKit, TypeScript  
+- API gateway: Node.js, NestJS/Fastify  
+- Microservices: Node.js (NestJS), Python (FastAPI)  
+- Data: PostgreSQL, MinIO  
+- Event bus: RabbitMQ/Kafka  
+- Service mesh: Istio  
+- Authentication: OAuth2/JWT via Keycloak or Auth0  
+- Containerization: Docker, Kubernetes  
+- Infrastructure: Terraform, Helm  
 
-## 🧩 Technology Stack
+## Roadmap
 
-- **Frontend**: SvelteKit, TypeScript
-- **API Gateway**: Node.js, NestJS/Fastify
-- **Microservices**: TypeScript/Node.js (NestJS), Python (FastAPI)
-- **Data Storage**: PostgreSQL, MinIO
-- **Event Bus**: RabbitMQ/Kafka
-- **Service Mesh**: Istio
-- **Authentication**: OAuth2/JWT via Keycloak or Auth0
-- **Containerization**: Docker, Kubernetes
-- **IaC**: Terraform, Helm
+- Mobile app via SvelteKit PWA  
+- On-device LLM inference (Ollama/CoreML)  
+- Privacy features using differential privacy  
+- OCR for financial documents  
+- Multi-account aggregation  
 
-## 🌟 Future Roadmap
+## License
 
-- Mobile app via SvelteKit PWA
-- On-device LLM inference with Ollama/CoreML
-- Enhanced privacy features with differential privacy
-- Financial document OCR processing
-- Multi-account aggregation
-i
-
-## 💼 License
-
-*TBD*
+TBD
